@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1iIq129k.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1isq129k.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1iAq129k.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1iEq129k.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa6zgTjmbI.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa6zETjmbI.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa6zoTjmbI.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa6zsTjmbI.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa6zUTjg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkTiUS2zcLig.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkTiUb2zcLig.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkTiUQ2zcLig.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkTiUR2zcLig.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkTiUf2zc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi3s-CI5q1vxiQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi3s-CIwq1vxiQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi3s-CI7q1vxiQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi3s-CI6q1vxiQ.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi3s-CI0q1s.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+/* IBM Plex Sans (like IBM Plex Mono/Serif) is licensed under the SIL Open Font License 1.1 — https://scripts.sil.org/OFL */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+</style>
+<style>
+  html, body { margin: 0; padding: 0; background: #f7f5f0; }
+  * { box-sizing: border-box; }
+  a { color: #3b2f8c; text-decoration: none; }
+  a:hover { color: #1a1440; }
+  ::selection { background: #ded7ff; }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #f7f5f0; color: #1c1a17; font-family: 'IBM Plex Serif', Georgia, serif; -webkit-font-smoothing: antialiased;">
+
+  <div style="position: relative; background: #4c7791; cursor: pointer;" sc-camel-on-click="{{ openGame }}" title="Play Canyon Run on the arcade" sc-camel-on-mouse-enter="{{ hoverOn }}" sc-camel-on-mouse-leave="{{ hoverOff }}">
+    <canvas ref="{{ bannerRef }}" style="display: block; width: 100%; height: 118px; transition: height 420ms cubic-bezier(.22,.9,.3,1);" style-hover="height: min(300px, 30vw);"></canvas>
+    <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 0 28px 18px; pointer-events: none;">
+      <div style="max-width: 860px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px;">
+        <div style="display: flex; align-items: baseline; gap: 12px; white-space: nowrap; padding: 6px 13px 8px; background: #15202a; border: 1px solid rgba(247,245,240,0.28);">
+          <span style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.02em; color: #ffd21f;">CANYON RUN</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #f0a62b;">wip</span>
+        </div>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #f7f5f0; background: #15202a; border: 1px solid rgba(247,245,240,0.28); padding: 6px 11px; white-space: nowrap;">▸ play on the arcade</span>
+      </div>
+    </div>
+  </div>
+
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(247,245,240,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #ddd8cd;">
+    <div style="max-width: 860px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 60px;">
+      <a href="#top" style="display: flex; align-items: baseline; gap: 10px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; color: #1c1a17;">
+        <span style="display: inline-block; width: 9px; height: 9px; background: #4b3bd6; border-radius: 2px;"></span>
+        Michal J. Wallace
+      </a>
+      <nav style="display: flex; align-items: center; gap: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.02em;">
+        <a href="/" title="portfolio" style="color: #1c1a17; border-bottom: 1.5px solid #4b3bd6; padding-bottom: 2px;">portfolio</a>
+        <a href="/resume" title="résumé" style="color: #6b655c;" style-hover="color: #1c1a17;">résumé</a>
+        <a href="http://tangentstorm.com/" title="Find Me Online" style="color: #6b655c;" style-hover="color: #1c1a17;">@tangentstorm</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" style="max-width: 860px; margin: 0 auto; padding: 0 28px 96px;">
+
+    <section style="padding: 80px 0 56px; border-bottom: 1px solid #ddd8cd;">
+      <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8378;">Portfolio · selected work</p>
+      <h1 style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: clamp(34px, 6vw, 54px); line-height: 1.04; letter-spacing: -0.03em; color: #16140f; text-wrap: balance;">Software Developer<br>Extraordinaire</h1>
+      <p style="margin: 24px 0 0; max-width: 48ch; font-size: 18px; line-height: 1.6; color: #4a453d; text-wrap: pretty;">Games, languages, and data structures — mostly built out of curiosity, in whatever language the problem asked for.</p>
+    </section>
+
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="5">
+      <article style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 32px; align-items: start; padding: 38px 0; border-bottom: 1px solid #e4dfd5;">
+        <div style="min-width: 0;">
+          <h2 style="margin: 0 0 12px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 27px; letter-spacing: -0.02em; line-height: 1.15;">
+            <a href="{{ p.href }}" style="color: #16140f; text-decoration: none; border-bottom: 2px solid #ded7ff; padding-bottom: 1px;" style-hover="border-bottom-color: #4b3bd6;">{{ p.title }}</a>
+          </h2>
+          <p style="margin: 0 0 18px; max-width: 58ch; font-size: 16.5px; line-height: 1.62; color: #4a453d; text-wrap: pretty;">{{ p.blurb }}</p>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px;">
+            <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
+              <a href="{{ t.href }}" style="display: inline-block; padding: 3px 9px; border: 1px solid #ddd8cd; border-radius: 999px; color: #6b655c; letter-spacing: 0.02em; background: #fbfaf7;" style-hover="border-color: #4b3bd6; color: #3b2f8c;">{{ t.name }}</a>
+            </sc-for>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px;">
+            <a href="{{ p.repo }}" style="color: #3b2f8c; display: inline-flex; align-items: center; gap: 7px;" style-hover="color: #1a1440;">
+              <span style="color: #b3ada1;">↗</span>source
+            </a>
+            <sc-if value="{{ p.demo }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ p.demo }}" style="color: #3b2f8c; display: inline-flex; align-items: center; gap: 7px;" style-hover="color: #1a1440;">
+                <span style="color: #b3ada1;">▸</span>play demo
+              </a>
+            </sc-if>
+          </div>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #8a8378; letter-spacing: 0.04em; padding-top: 7px;">{{ p.year }}</div>
+      </article>
+    </sc-for>
+
+    <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 40px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8a8378;">
+      <span>Michal J. Wallace · <a href="http://tangentstorm.com/" style="color: #6b655c;" style-hover="color: #1c1a17;">tangentstorm.com</a></span>
+      <a href="/rss.xml" title="Michal J. Wallace RSS" style="display: inline-flex; align-items: center; gap: 8px; color: #6b655c; border: 1px solid #ddd8cd; border-radius: 999px; padding: 5px 13px; background: #fbfaf7;" style-hover="border-color: #d06a1e; color: #a8500f;">
+        <span style="color: #d06a1e;">◉</span>subscribe via RSS
+      </a>
+    </footer>
+  </main>
+
+  <sc-if value="{{ expanded }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 100; background: rgba(12,20,26,0.95); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 20px;">
+      <div style="width: 100%; max-width: 460px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;">
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: #ffd21f;">CANYON RUN</span>
+        <button sc-camel-on-click="{{ closeGame }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #e9e2d5; background: transparent; border: 1px solid rgba(247,245,240,0.3); padding: 7px 12px; cursor: pointer;" style-hover="border-color: #ffd21f; color: #ffd21f;">esc · close</button>
+      </div>
+
+      <div style="position: relative; width: 100%; max-width: 460px; border: 1px solid rgba(247,245,240,0.22); background: #4c7791;">
+        <canvas ref="{{ gameRef }}" style="display: block; width: 100%; height: min(70vh, 640px);"></canvas>
+        <sc-if value="{{ dead }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(12,20,26,0.84);">
+            <span style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; color: #f7f5f0; text-align: center;">{{ deadTitle }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #e9e2d5;">score {{ score }} · {{ distance }} km</span>
+            <button sc-camel-on-click="{{ restart }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #15202a; background: #ffd21f; border: 0; padding: 11px 20px; cursor: pointer;" style-hover="background: #f7f5f0;">press r · fly again</button>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="width: 100%; max-width: 460px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #9fb3bf;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span style="color: #f7f5f0;">score <span ref="{{ scoreRef }}" style="color: #ffd21f;">0</span></span>
+          <span style="color: #f7f5f0;"><span ref="{{ distRef }}" style="color: #ffd21f;">0.0</span> km</span>
+          <span style="display: flex; align-items: center; gap: 7px;">fuel
+            <span style="display: block; width: 96px; height: 9px; background: #1d2c36; border: 1px solid rgba(247,245,240,0.25);">
+              <span ref="{{ fuelRef }}" style="display: block; height: 100%; width: 100%; background: #ffd21f;"></span>
+            </span>
+          </span>
+        </div>
+        <span>← → steer · space fire</span>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;},&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:170,&quot;min&quot;:70,&quot;max&quot;:320,&quot;step&quot;:10,&quot;unit&quot;:&quot;px/s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Canyon Run&quot;},&quot;playable&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Canyon Run&quot;}}">
+const rnd = (a, b) => a + Math.random() * (b - a);
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+
+// paper-cut contour palette, ordered from the water edge outward
+const BANDS = ['#6b4f36', '#8a6748', '#a87f4f', '#c39655', '#dcb46a', '#f0dcae'];
+const WATER_TOP = '#7ba7c2', WATER_BOT = '#3d6b87';
+const LAYERS = 6;
+// scroll rate per contour layer: higher ground is closer to the camera, so it drifts faster
+const RATES = [1, 1.07, 1.15, 1.24, 1.34, 1.45];
+
+class Component extends DCLogic {
+  bannerRef = React.createRef();
+  gameRef = React.createRef();
+  scoreRef = React.createRef();
+  distRef = React.createRef();
+  fuelRef = React.createRef();
+  state = { expanded: false, dead: false, score: 0, distance: '0.0', deadTitle: 'CRASHED' };
+
+  componentDidMount() {
+    this.amb = this.newWorld();
+    this.keys = {};
+    this.onKey = e => {
+      if (!this.state.expanded) return;
+      const k = e.key.toLowerCase();
+      if (k === 'escape') return this.closeGame();
+      if (k === 'r' && this.state.dead) return this.restart();
+      if ([' ', 'arrowleft', 'arrowright', 'arrowup', 'arrowdown'].includes(k)) e.preventDefault();
+      this.keys[k] = true;
+    };
+    this.offKey = e => { this.keys[e.key.toLowerCase()] = false; };
+    window.addEventListener('keydown', this.onKey);
+    window.addEventListener('keyup', this.offKey);
+
+    this.frames = 0; this.t = 0; this.last = performance.now();
+    this.tick = () => {
+      const now = performance.now();
+      const dt = Math.min(0.045, (now - this.last) / 1000);
+      this.last = now; this.frames++; this.t += dt;
+      try {
+        if (this.state.expanded) { this.stepGame(dt); this.paint(this.gameRef.current, this.game, true); }
+        else { this.stepAmbient(dt); this.paint(this.bannerRef.current, this.amb, false); }
+      } catch (e) { window.__crErr = (e && e.stack) || String(e); }
+    };
+    this.loop = () => { this.tick(); this.raf = requestAnimationFrame(this.loop); };
+    this.raf = requestAnimationFrame(this.loop);
+    this.watchdog = setTimeout(() => {
+      if (this.frames < 2) { cancelAnimationFrame(this.raf); this.raf = 0; this.interval = setInterval(this.tick, 33); }
+    }, 500);
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf); clearTimeout(this.watchdog); clearInterval(this.interval);
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('keyup', this.offKey);
+  }
+
+  // ————— terrain: one continuous paper-cut canyon, contoured like a topo map —————
+  genRow(b) {
+    const p = b.rows[b.rows.length - 1];
+    const y = p.y + rnd(95, 180);
+    let c = p.c, wd = p.wd;
+    if (Math.random() > 0.2) {                       // sometimes hold flat — paper-cut plateaus
+      c = clamp(c + rnd(-0.085, 0.085), 0.36, 0.64);
+      wd = clamp(wd + rnd(-0.1, 0.1), b.wmin, b.wmax);
+    }
+    b.rows.push({ y, c, wd, l: c - wd / 2, r: c + wd / 2 });
+  }
+
+  edgeOf(rows, side, wy) {
+    if (wy <= rows[0].y) return side < 0 ? rows[0].l : rows[0].r;
+    for (let i = 1; i < rows.length; i++) {
+      if (wy <= rows[i].y) {
+        const a = rows[i - 1], b = rows[i], t = (wy - a.y) / (b.y - a.y);
+        return side < 0 ? a.l + (b.l - a.l) * t : a.r + (b.r - a.r) * t;
+      }
+    }
+    const L = rows[rows.length - 1];
+    return side < 0 ? L.l : L.r;
+  }
+
+  edge(w, side, wy) { return this.edgeOf(w.rows, side, wy); }
+
+  makeIsland(w, wy) {
+    const l = this.edge(w, -1, wy), r = this.edge(w, 1, wy);
+    if (r - l < 0.42) return null;
+    const rx = rnd(0.032, 0.07);
+    const mid = rnd(l + rx + 0.11, r - rx - 0.11);
+    const ry = rnd(55, 125), n = 7, pts = [];
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 + rnd(-0.16, 0.16), k = rnd(0.74, 1.16);
+      pts.push({ x: mid + Math.cos(a) * rx * k, y: wy + Math.sin(a) * ry * k });
+    }
+    return { pts, cx: mid, cy: wy };
+  }
+
+  ensureTerrain(w, upto) {
+    const reach = upto - w.camY;
+    for (const b of w.bands) {
+      const cam = w.camY * b.rate;
+      while (b.rows[b.rows.length - 1].y < cam + reach) this.genRow(b);
+      while (b.rows.length > 4 && b.rows[1].y < cam - 700) b.rows.shift();
+    }
+    while (w.fI < upto) {
+      w.fI += rnd(520, 1100);
+      const f = this.makeIsland(w, w.fI);
+      if (f) w.land.push(f);
+    }
+    w.land = w.land.filter(f => f.cy > w.camY - 700);
+  }
+
+  inside(f, x, y) {
+    const p = f.pts; let hit = false;
+    for (let i = 0, j = p.length - 1; i < p.length; j = i++) {
+      if ((p[i].y > y) !== (p[j].y > y) &&
+        x < p[i].x + (p[j].x - p[i].x) * (y - p[i].y) / (p[j].y - p[i].y)) hit = !hit;
+    }
+    return hit;
+  }
+
+  onIsland(w, x, wy) {
+    for (const f of w.land) {
+      if (Math.abs(f.cy - wy) > 400) continue;
+      if (this.inside(f, x, wy)) return true;
+    }
+    return false;
+  }
+
+  blocked(w, x, wy) {
+    if (x < this.edge(w, -1, wy) || x > this.edge(w, 1, wy)) return true;
+    return this.onIsland(w, x, wy);
+  }
+
+  // open water intervals across the channel at a given world y
+  freeSpans(w, wy) {
+    const l = this.edge(w, -1, wy), r = this.edge(w, 1, wy);
+    if (r - l < 0.03) return [[(l + r) / 2 - 0.012, (l + r) / 2 + 0.012]];
+    const N = 32, open = [];
+    for (let i = 0; i <= N; i++) open.push(!this.onIsland(w, l + (r - l) * (i / N), wy));
+    const spans = [];
+    let st = null;
+    for (let i = 0; i <= N; i++) {
+      if (open[i] && st === null) st = i;
+      if ((!open[i] || i === N) && st !== null) {
+        const a = l + (r - l) * (st / N), b = l + (r - l) * ((open[i] ? i : i - 1) / N);
+        if (b - a > 0.015) spans.push([a, b]);
+        st = null;
+      }
+    }
+    return spans.length ? spans : [[l, r]];
+  }
+
+  // the free span nearest to x (not the widest — that can sit across an island)
+  nearestSpan(w, wy, x) {
+    const spans = this.freeSpans(w, wy).filter(s => s[1] - s[0] > 0.04);
+    if (!spans.length) return null;
+    let best = spans[0], bd = Infinity;
+    for (const s of spans) {
+      const d = x < s[0] ? s[0] - x : x > s[1] ? x - s[1] : 0;
+      if (d < bd) { bd = d; best = s; }
+    }
+    return best;
+  }
+
+  aimFor(w, wy, x) {
+    const s = this.nearestSpan(w, wy, x);
+    return s ? clamp(x, s[0] + 0.06, s[1] - 0.06) : x;
+  }
+
+  // keep a flyer honest: never let it sit inside a landform
+  confine(w, wy, x) {
+    const s = this.nearestSpan(w, wy, x);
+    return s ? clamp(x, s[0] + 0.02, s[1] - 0.02) : x;
+  }
+
+  newWorld() {
+    const w = { camY: 0, px: 0.5, vx: 0, objs: [], shots: [], puffs: [], land: [],
+      bands: [], fI: 900, spawnedTo: 700, fuel: 100, score: 0, cool: 0 };
+    // layer 0 is the waterline (what you actually crash into); higher layers are
+    // higher ground — nearer the overhead camera, so they scroll faster
+    for (let i = 0; i < LAYERS; i++) {
+      const inset = i * 0.05;
+      const b = {
+        rate: RATES[i], inset,
+        wmin: Math.max(0.1, 0.3 - inset * 2), wmax: Math.max(0.16, 0.68 - inset * 2),
+        rows: [{ y: -700, c: 0.5, wd: 0.54 - inset * 2, l: 0.23 + inset, r: 0.77 - inset }]
+      };
+      w.bands.push(b);
+    }
+    w.rows = w.bands[0].rows;
+    this.ensureTerrain(w, 3200);
+    w.rows = w.bands[0].rows;
+    return w;
+  }
+
+  spawn(w, upto) {
+    while (w.spawnedTo < upto) {
+      w.spawnedTo += rnd(230, 480);
+      const wy = w.spawnedTo;
+      const spans = this.freeSpans(w, wy).filter(s => s[1] - s[0] > 0.16);
+      if (!spans.length) continue;
+      const s = spans[Math.floor(Math.random() * spans.length)];
+      const x = rnd(s[0] + 0.05, s[1] - 0.05), roll = Math.random();
+      if (roll < 0.38) w.objs.push({ t: 'heli', wy, x, drift: rnd(-0.1, 0.1), ph: rnd(0, 7), alive: 1 });
+      else if (roll < 0.78) w.objs.push({ t: 'boat', wy, x, drift: rnd(-0.045, 0.045), alive: 1 });
+      else w.objs.push({ t: 'tanker', wy, x, drift: 0, alive: 1 });
+    }
+  }
+
+  advance(w, dt, speed) {
+    w.camY += speed * dt;
+    this.ensureTerrain(w, w.camY + 3200);
+    this.spawn(w, w.camY + 2200);
+    w.objs = w.objs.filter(o => o.alive && o.wy > w.camY - 200);
+    for (const o of w.objs) {
+      if (o.drift) {
+        const nx = o.x + o.drift * dt;
+        if (nx < 0.04 || nx > 0.96 || this.blocked(w, nx, o.wy)) o.drift *= -1;
+        else o.x = nx;
+      }
+      if (this.blocked(w, o.x, o.wy)) {
+        const s = this.nearestSpan(w, o.wy, o.x);
+        if (!s) { o.alive = 0; continue; }
+        const target = clamp(o.x, s[0] + 0.05, s[1] - 0.05);
+        o.x += clamp(target - o.x, -dt * 0.9, dt * 0.9);
+        if (this.blocked(w, o.x, o.wy) && Math.abs(target - o.x) < 0.004) o.alive = 0;
+      }
+    }
+    for (const s of w.shots) s.wy += dt * 900;
+    w.shots = w.shots.filter(s => !s.dead && s.wy < w.camY + 2200);
+    w.puffs = w.puffs.filter(p => (p.life -= dt) > 0);
+  }
+
+  stepAmbient(dt) {
+    const w = this.amb;
+    this.advance(w, dt, this.props.speed ?? 170);
+    const aim = this.aimFor(w, w.camY + 210, w.px);
+    w.vx += (aim - w.px) * 9 * dt;
+    w.vx *= 0.88;
+    w.px = this.confine(w, w.camY + this.planeWy(), clamp(w.px + w.vx, 0.03, 0.97));
+    w.cool -= dt;
+    if (w.cool <= 0) { w.cool = rnd(0.5, 1.4); this.fire(w); }
+  }
+
+  fire(w) {
+    w.shots.push({ wy: w.camY + this.planeWy(), x: w.px - 0.028 });
+    w.shots.push({ wy: w.camY + this.planeWy(), x: w.px + 0.028 });
+  }
+
+  planeWy() { return this.pWy || 120; }
+
+  stepGame(dt) {
+    const w = this.game; if (!w || this.state.dead) return;
+    const K = this.keys;
+    this.advance(w, dt, (this.props.speed ?? 170) * 1.35);
+
+    const steer = (K.arrowright || K.d ? 1 : 0) - (K.arrowleft || K.a ? 1 : 0);
+    w.vx += steer * dt * 0.75;
+    w.vx *= 0.86;
+    w.px = clamp(w.px + w.vx * dt * 3.4, 0.02, 0.98);
+
+    w.fuel -= dt * 5.2;
+    w.score += dt * 11;
+    w.cool = Math.max(0, w.cool - dt);
+    if ((K[' '] || K.arrowup) && w.cool === 0) { this.fire(w); w.cool = 0.2; }
+
+    const pwy = w.camY + this.planeWy();
+    for (const s of w.shots) {
+      for (const o of w.objs) {
+        if (!o.alive) continue;
+        if (Math.abs(o.wy - s.wy) < 26 && Math.abs(o.x - s.x) < 0.055) {
+          o.alive = 0; s.dead = 1;
+          w.score += o.t === 'heli' ? 70 : o.t === 'tanker' ? 90 : 40;
+          w.puffs.push({ wy: o.wy, x: o.x, life: 0.4 });
+          break;
+        }
+      }
+    }
+
+    const hx = this.hitX || 0.05, hy = this.hitY || 20;
+    for (const dx of [0, -hx, hx, -hx * 0.55, hx * 0.55]) {
+      for (const dy of [0, hy * 0.7, -hy * 0.7]) {
+        if (this.blocked(w, w.px + dx, pwy + dy)) return this.crash('CRASHED INTO THE CANYON');
+      }
+    }
+    for (const o of w.objs) {
+      if (!o.alive) continue;
+      const near = Math.abs(o.wy - pwy) < hy + (this.objY || 14) &&
+        Math.abs(o.x - w.px) < hx + (this.objX || 0.045);
+      if (!near) continue;
+      if (o.t === 'tanker') { w.fuel = Math.min(100, w.fuel + dt * 240); continue; }
+      return this.crash(o.t === 'heli' ? 'CLIPPED A CHOPPER' : 'HIT A GUNBOAT');
+    }
+    if (w.fuel <= 0) return this.crash('OUT OF FUEL');
+
+    if (this.frames % 5 === 0) {
+      if (this.scoreRef.current) this.scoreRef.current.textContent = Math.floor(w.score);
+      if (this.distRef.current) this.distRef.current.textContent = (w.camY / 1000).toFixed(1);
+      if (this.fuelRef.current) {
+        this.fuelRef.current.style.width = clamp(w.fuel, 0, 100) + '%';
+        this.fuelRef.current.style.background = w.fuel < 25 ? '#e2562a' : '#ffd21f';
+      }
+    }
+  }
+
+  crash(title) {
+    const w = this.game;
+    w.puffs.push({ wy: w.camY + this.planeWy(), x: w.px, life: 0.9, big: 1 });
+    this.setState({ dead: true, deadTitle: title, score: Math.floor(w.score), distance: (w.camY / 1000).toFixed(1) });
+  }
+
+  openGame = () => {
+    window.location.href = 'https://tangentstorm.github.io/arcade/';
+  };
+  closeGame = () => this.setState({ expanded: false, dead: false });
+  hoverOn = () => { this.hover = true; };
+  hoverOff = () => { this.hover = false; };
+
+  restart = () => { this.game = this.newWorld(); this.setState({ dead: false }); };
+
+  paint(c, w, isGame) {
+    if (!c || !w) return;
+    const W = c.clientWidth, H = c.clientHeight; if (!W || !H) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    if (c.width !== Math.round(W * dpr) || c.height !== Math.round(H * dpr)) {
+      c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+    }
+    const g = c.getContext('2d');
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const camY = w.camY;
+    const S = clamp(W / 1250, 0.42, 0.9);     // sprite scale
+    // hitboxes, derived from the sprite metrics used below (0.7 = forgiving)
+    this.hitX = (34 * S * 1.25 * 0.7) / W;    // jet wing half-span, as a fraction of width
+    this.hitY = 27 * S * 1.25 * 0.7;          // jet nose-to-tail half-length, in px
+    this.objX = (26 * S * 1.1 * 0.8) / W;     // boat half-length
+    this.objY = 13 * S * 1.15 * 0.8;          // chopper half-height
+    const step = H > 420 ? 3 : 2;
+    this.pWy = H * 0.24;                        // plane sits 24% up from the bottom
+    const sy = wy => H - (wy - camY);          // world y → screen y
+
+    // water
+    const wg = g.createLinearGradient(0, 0, 0, H);
+    wg.addColorStop(0, WATER_TOP); wg.addColorStop(1, WATER_BOT);
+    g.fillStyle = wg; g.fillRect(0, 0, W, H);
+
+    // scalloped wave lines — three layers, each drifting at its own rate
+    const layers = [
+      { gap: 34, rate: 0.55, amp: 4.2, freq: 0.032, h: 2.2, col: 'rgba(18,48,66,0.08)' },
+      { gap: 24, rate: 0.78, amp: 3.0, freq: 0.05, h: 1.8, col: 'rgba(255,255,255,0.10)' },
+      { gap: 17, rate: 1.06, amp: 1.9, freq: 0.08, h: 1.4, col: 'rgba(255,255,255,0.07)' }
+    ];
+    for (const L of layers) {
+      const scroll = camY * L.rate + this.t * 14 * L.rate;
+      const first = Math.floor((scroll - H * 0.12) / L.gap) * L.gap;
+      g.fillStyle = L.col;
+      for (let i = 0; i < Math.ceil(H / L.gap) + 3; i++) {
+        const wy = first + i * L.gap, y = H - (wy - scroll);
+        if (y < -8 || y > H + 8) continue;
+        for (let x = 0; x < W; x += 7) {
+          g.fillRect(x, y + Math.sin((x + wy * 0.6) * L.freq) * L.amp, 7, L.h);
+        }
+      }
+    }
+
+    // canyon walls: every contour layer is its own coastline on its own scroll rate,
+    // so the ridges shear against each other as you fly
+    const STEP = 6;
+    for (let i = 0; i < LAYERS; i++) {
+      const b = w.bands[i], cam = camY * b.rate, minGap = i * 0.014;
+      for (const side of [-1, 1]) {
+        const far = side < 0 ? -0.4 * W : 1.4 * W;
+        const pts = [];
+        for (let y = H + 24; y > -24; y -= STEP) {
+          const own = this.edgeOf(b.rows, side, cam + (H - y));
+          const coast = this.edgeOf(w.rows, side, camY + (H - y));
+          const x = side < 0 ? Math.min(own, coast - minGap) : Math.max(own, coast + minGap);
+          pts.push([x * W, y]);
+        }
+        const trace = (dx, dy) => {
+          g.beginPath();
+          g.moveTo(far, pts[0][1] + dy);
+          for (const p of pts) g.lineTo(p[0] + dx, p[1] + dy);
+          g.lineTo(far, pts[pts.length - 1][1] + dy);
+          g.closePath();
+        };
+        if (i) { trace(side < 0 ? 3 : -3, 5); g.fillStyle = 'rgba(38,22,8,0.2)'; g.fill(); }
+        trace(0, 0); g.fillStyle = BANDS[i]; g.fill();
+        if (!i) { g.strokeStyle = 'rgba(20,50,70,0.22)'; g.lineWidth = 1.4; g.stroke(); }
+      }
+    }
+
+    // islands: the same contour treatment, nested toward the centroid
+    for (const fe of w.land) {
+      if (H - (fe.cy - camY) < -400 || H - (fe.cy - camY) > H + 400) continue;
+      for (let i = 0; i < LAYERS; i++) {
+        const k = 1 - i * 0.17; if (k <= 0.12) break;
+        const shape = (dx, dy) => {
+          g.beginPath();
+          fe.pts.forEach((p, j) => {
+            const x = (fe.cx + (p.x - fe.cx) * k) * W + dx;
+            const y = H - ((fe.cy + (p.y - fe.cy) * k) - camY) - i * 5 + dy;
+            j ? g.lineTo(x, y) : g.moveTo(x, y);
+          });
+          g.closePath();
+        };
+        if (i) { shape(2, 5); g.fillStyle = 'rgba(38,22,8,0.2)'; g.fill(); }
+        shape(0, 0); g.fillStyle = BANDS[i]; g.fill();
+      }
+      g.beginPath();
+      fe.pts.forEach((p, j) => {
+        const x = p.x * W, y = H - (p.y - camY);
+        j ? g.lineTo(x, y) : g.moveTo(x, y);
+      });
+      g.closePath();
+      g.strokeStyle = 'rgba(20,50,70,0.2)'; g.lineWidth = 1.4; g.stroke();
+    }
+
+    // shots — twin flame darts, as in the banner art
+    for (const s of w.shots) {
+      const y = sy(s.wy); if (y < -20 || y > H + 20) continue;
+      const x = s.x * W, h = 13 * S, wd = 7 * S;
+      g.fillStyle = '#d9541b';
+      g.beginPath();
+      g.moveTo(x, y - h * 0.5); g.lineTo(x + wd * 0.5, y + h * 0.5); g.lineTo(x - wd * 0.5, y + h * 0.5);
+      g.closePath(); g.fill();
+      g.fillStyle = '#ffd21f';
+      g.beginPath();
+      g.moveTo(x, y - h * 0.18); g.lineTo(x + wd * 0.28, y + h * 0.42); g.lineTo(x - wd * 0.28, y + h * 0.42);
+      g.closePath(); g.fill();
+    }
+
+    for (const o of w.objs) {
+      const y = sy(o.wy); if (y < -60 || y > H + 60) continue;
+      const x = o.x * W;
+      if (o.t === 'heli') this.drawHeli(g, x, y, S, o.ph);
+      else if (o.t === 'boat') this.drawBoat(g, x, y, S, '#d8202a', '#f7f5f0');
+      else this.drawBoat(g, x, y, S, '#f0a62b', '#ffd21f');
+    }
+
+    for (const p of w.puffs) {
+      const y = sy(p.wy), x = p.x * W, k = 1 - p.life / (p.big ? 0.9 : 0.4);
+      const R = (p.big ? 40 : 22) * S * (0.45 + k);
+      g.fillStyle = `rgba(217,124,27,${(1 - k) * 0.9})`;
+      g.beginPath(); g.arc(x, y, R, 0, 7); g.fill();
+      g.fillStyle = `rgba(255,210,31,${(1 - k) * 0.85})`;
+      g.beginPath(); g.arc(x, y, R * 0.5, 0, 7); g.fill();
+    }
+
+    this.drawJet(g, w.px * W, sy(camY + this.pWy), S, clamp(w.vx * 6, -1, 1));
+
+    if (!isGame) { g.fillStyle = 'rgba(12,20,26,0.08)'; g.fillRect(0, 0, W, H); }
+  }
+
+  drawJet(g, x, y, S, bank) {
+    g.save(); g.translate(x, y); g.rotate(bank * 0.12);
+    const s = S * 1.25;
+    // engine flames
+    for (const dx of [-7 * s, 7 * s]) {
+      g.fillStyle = '#d9541b';
+      g.beginPath(); g.moveTo(dx, 30 * s); g.lineTo(dx - 3.4 * s, 17 * s); g.lineTo(dx + 3.4 * s, 17 * s); g.closePath(); g.fill();
+      g.fillStyle = '#ffd21f';
+      g.beginPath(); g.moveTo(dx, 25 * s); g.lineTo(dx - 1.8 * s, 17 * s); g.lineTo(dx + 1.8 * s, 17 * s); g.closePath(); g.fill();
+    }
+    g.fillStyle = 'rgba(18,48,66,0.22)';
+    g.beginPath(); g.ellipse(4 * s, 8 * s, 26 * s, 9 * s, 0, 0, 7); g.fill();
+    // wings
+    g.fillStyle = '#d7dbdd';
+    g.beginPath();
+    g.moveTo(0, -12 * s); g.lineTo(5 * s, 2 * s); g.lineTo(34 * s, 15 * s); g.lineTo(34 * s, 19 * s);
+    g.lineTo(4 * s, 14 * s); g.lineTo(-4 * s, 14 * s); g.lineTo(-34 * s, 19 * s); g.lineTo(-34 * s, 15 * s);
+    g.lineTo(-5 * s, 2 * s); g.closePath(); g.fill();
+    g.fillStyle = 'rgba(90,110,120,0.22)';
+    g.beginPath();
+    g.moveTo(0, -12 * s); g.lineTo(5 * s, 2 * s); g.lineTo(34 * s, 15 * s); g.lineTo(34 * s, 19 * s); g.lineTo(4 * s, 14 * s); g.closePath(); g.fill();
+    // tailplanes
+    g.fillStyle = '#c3c9cc';
+    g.beginPath(); g.moveTo(-12 * s, 12 * s); g.lineTo(-18 * s, 24 * s); g.lineTo(-7 * s, 20 * s); g.closePath(); g.fill();
+    g.beginPath(); g.moveTo(12 * s, 12 * s); g.lineTo(18 * s, 24 * s); g.lineTo(7 * s, 20 * s); g.closePath(); g.fill();
+    // fuselage
+    g.fillStyle = '#f7f5f0';
+    g.beginPath();
+    g.moveTo(0, -27 * s); g.lineTo(5 * s, -6 * s); g.lineTo(6.5 * s, 18 * s); g.lineTo(-6.5 * s, 18 * s); g.lineTo(-5 * s, -6 * s);
+    g.closePath(); g.fill();
+    g.fillStyle = 'rgba(120,140,150,0.28)';
+    g.beginPath(); g.moveTo(0, -27 * s); g.lineTo(5 * s, -6 * s); g.lineTo(6.5 * s, 18 * s); g.lineTo(0, 18 * s); g.closePath(); g.fill();
+    g.fillStyle = '#2f4a5a';
+    g.beginPath(); g.ellipse(0, -13 * s, 3.1 * s, 5.4 * s, 0, 0, 7); g.fill();
+    g.restore();
+  }
+
+  drawHeli(g, x, y, S, ph) {
+    const s = S * 1.15, spin = this.t * 13 + ph;
+    g.save(); g.translate(x, y);
+    g.fillStyle = 'rgba(18,48,66,0.22)';
+    g.beginPath(); g.ellipse(6 * s, 9 * s, 22 * s, 8 * s, 0, 0, 7); g.fill();
+    // tail boom to the right + rotor ball
+    g.fillStyle = '#141b20';
+    g.beginPath(); g.ellipse(21 * s, 0, 16 * s, 3.6 * s, 0, 0, 7); g.fill();
+    g.fillStyle = '#f7f5f0';
+    g.beginPath(); g.arc(37 * s, 0, 5.2 * s, 0, 7); g.fill();
+    // body
+    g.fillStyle = '#141b20';
+    g.beginPath(); g.ellipse(0, 0, 21 * s, 13 * s, 0, 0, 7); g.fill();
+    g.fillStyle = '#2a353d';
+    g.beginPath(); g.ellipse(-2 * s, -3.5 * s, 17 * s, 7.5 * s, 0, 0, 7); g.fill();
+    // canopy
+    g.fillStyle = '#1f8fc4';
+    g.beginPath(); g.ellipse(-9 * s, 0, 8 * s, 7.4 * s, 0, 0, 7); g.fill();
+    g.fillStyle = '#5fc8ec';
+    g.beginPath(); g.ellipse(-10.5 * s, -2 * s, 4.4 * s, 3.4 * s, 0, 0, 7); g.fill();
+    // skids
+    g.fillStyle = '#39454c';
+    g.fillRect(-13 * s, 10 * s, 24 * s, 2.4 * s);
+    // main rotor
+    g.fillStyle = '#ffd21f';
+    for (let i = 0; i < 4; i++) {
+      const a = spin + i * Math.PI / 2;
+      g.save(); g.rotate(a);
+      g.fillRect(-1.9 * s, -3 * s, 34 * s, 3.6 * s);
+      g.restore();
+    }
+    g.fillStyle = '#d9a400';
+    g.beginPath(); g.arc(0, 0, 3.4 * s, 0, 7); g.fill();
+    g.restore();
+  }
+
+  drawBoat(g, x, y, S, hull, stripe) {
+    const s = S * 1.1;
+    g.fillStyle = 'rgba(18,48,66,0.2)';
+    g.beginPath(); g.ellipse(x + 4 * s, y + 6 * s, 26 * s, 7 * s, 0, 0, 7); g.fill();
+    g.fillStyle = hull;
+    g.beginPath();
+    g.moveTo(x - 26 * s, y - 6 * s); g.lineTo(x + 20 * s, y - 6 * s); g.lineTo(x + 30 * s, y);
+    g.lineTo(x + 20 * s, y + 6 * s); g.lineTo(x - 26 * s, y + 6 * s);
+    g.closePath(); g.fill();
+    g.fillStyle = stripe;
+    g.fillRect(x - 26 * s, y - 1.6 * s, 50 * s, 3.4 * s);
+    g.fillStyle = '#39454c';
+    g.beginPath();
+    g.moveTo(x - 10 * s, y - 6 * s); g.lineTo(x + 2 * s, y - 6 * s); g.lineTo(x - 2 * s, y - 12 * s); g.lineTo(x - 8 * s, y - 12 * s);
+    g.closePath(); g.fill();
+    g.restore && g.restore;
+  }
+
+  renderVals() {
+    const T = (name, term) => ({ name, href: `/taxonomy/term/${term}` });
+    return {
+      bannerRef: this.bannerRef, gameRef: this.gameRef,
+      scoreRef: this.scoreRef, distRef: this.distRef, fuelRef: this.fuelRef,
+      expanded: this.state.expanded, dead: this.state.dead,
+      score: this.state.score, distance: this.state.distance, deadTitle: this.state.deadTitle,
+      openGame: this.openGame, closeGame: this.closeGame, restart: this.restart,
+      projects: [
+        { title: 'chesscoach', href: '/node/15', year: '2019',
+          blurb: 'A simple chess UI in go, with frontends in direct graphics and JS + websockets.',
+          tags: [T('chess', 18), T('go', 19), T('js', 20)],
+          repo: 'https://github.com/tangentstorm/chesscoach', demo: null },
+        { title: 'bex', href: '/node/14', year: '2019',
+          blurb: 'A rust crate for working with large boolean expressions as ASTs, binary decision diagrams, or algebraic normal form.',
+          tags: [T('bdd', 17), T('data structure', 16), T('rust', 15)],
+          repo: 'https://github.com/tangentstorm/bex', demo: null },
+        { title: 'Tentraminos', href: '/node/12', year: '2013',
+          blurb: 'A falling blocks game I made with typescript and d3 for Ludum Dare 27.',
+          tags: [T('d3.js', 12), T('game', 3), T('typescript', 11)],
+          repo: 'https://github.com/tangentstorm/tentraminos', demo: 'http://games.tangentcode.com/tentraminos/' },
+        { title: 'Tetraminex', href: '/node/9', year: '2011',
+          blurb: 'A puzzle game that combines sokoban with the push-pull mechanic from arimaa.',
+          tags: [T('as3', 6), T('flash', 2), T('game', 3)],
+          repo: 'https://github.com/sabren/tetraminex', demo: 'http://tetraminex.com/episode/00/' },
+        { title: 'Spiders v Aliens', href: '/node/7', year: '2011',
+          blurb: 'A short action/adventure game I made for Ludum Dare.',
+          tags: [T('as3', 6), T('flash', 2), T('flixel', 5), T('game', 3)],
+          repo: 'https://github.com/sabren/spiders-v-aliens', demo: 'http://www.kongregate.com/games/tangentstorm/spiders-v-aliens' }
+      ]
+    };
+  }
+}
+
+</script>
+
+
+</body></html>
