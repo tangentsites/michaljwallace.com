@@ -280,7 +280,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* vietnamese */
-/* IBM Plex Sans (like IBM Plex Mono/Serif) is licensed under the SIL Open Font License 1.1 — https://scripts.sil.org/OFL */
+/* IBM Plex Sans (like IBM Plex Mono/Serif) is licensed under the SIL Open Font License 1.1 — https://openfontlicense.org/ */
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: normal;
@@ -362,8 +362,8 @@
       </a>
       <nav style="display: flex; align-items: center; gap: 22px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.02em;">
         <a href="/" title="portfolio" style="color: #1c1a17; border-bottom: 1.5px solid #4b3bd6; padding-bottom: 2px;">portfolio</a>
-        <a href="/resume" title="résumé" style="color: #6b655c;" style-hover="color: #1c1a17;">résumé</a>
-        <a href="http://tangentstorm.com/" title="Find Me Online" style="color: #6b655c;" style-hover="color: #1c1a17;">@tangentstorm</a>
+        <a href="https://github.com/tangentstorm/tangentstorm/blob/main/resume.pdf" title="résumé" style="color: #6b655c;" style-hover="color: #1c1a17;">résumé</a>
+        <a href="https://tangentstorm.com/" title="Find Me Online" style="color: #6b655c;" style-hover="color: #1c1a17;">@tangentstorm</a>
       </nav>
     </div>
   </header>
@@ -385,7 +385,7 @@
           <p style="margin: 0 0 18px; max-width: 58ch; font-size: 16.5px; line-height: 1.62; color: #4a453d; text-wrap: pretty;">{{ p.blurb }}</p>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px;">
             <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
-              <a href="{{ t.href }}" style="display: inline-block; padding: 3px 9px; border: 1px solid #ddd8cd; border-radius: 999px; color: #6b655c; letter-spacing: 0.02em; background: #fbfaf7;" style-hover="border-color: #4b3bd6; color: #3b2f8c;">{{ t.name }}</a>
+              <span style="display: inline-block; padding: 3px 9px; border: 1px solid #ddd8cd; border-radius: 999px; color: #6b655c; letter-spacing: 0.02em; background: #fbfaf7;">{{ t.name }}</span>
             </sc-for>
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px;">
@@ -404,10 +404,8 @@
     </sc-for>
 
     <footer style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 40px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8a8378;">
-      <span>Michal J. Wallace · <a href="http://tangentstorm.com/" style="color: #6b655c;" style-hover="color: #1c1a17;">tangentstorm.com</a></span>
-      <a href="/rss.xml" title="Michal J. Wallace RSS" style="display: inline-flex; align-items: center; gap: 8px; color: #6b655c; border: 1px solid #ddd8cd; border-radius: 999px; padding: 5px 13px; background: #fbfaf7;" style-hover="border-color: #d06a1e; color: #a8500f;">
-        <span style="color: #d06a1e;">◉</span>subscribe via RSS
-      </a>
+      <span>Michal J. Wallace · <a href="https://tangentstorm.com/" style="color: #6b655c;" style-hover="color: #1c1a17;">tangentstorm.com</a></span>
+      <span>subscribe via RSS</span>
     </footer>
   </main>
 
@@ -758,7 +756,7 @@ class Component extends DCLogic {
   }
 
   openGame = () => {
-    window.location.href = 'https://tangentstorm.github.io/arcade/';
+    window.location.href = 'https://tangentstorm.github.io/arcade/canyon_run/#play/canyon_run/direct';
   };
   closeGame = () => this.setState({ expanded: false, dead: false });
   hoverOn = () => { this.hover = true; };
@@ -991,7 +989,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const T = (name, term) => ({ name, href: `/taxonomy/term/${term}` });
+    const T = (name) => ({ name });
     return {
       bannerRef: this.bannerRef, gameRef: this.gameRef,
       scoreRef: this.scoreRef, distRef: this.distRef, fuelRef: this.fuelRef,
@@ -999,26 +997,26 @@ class Component extends DCLogic {
       score: this.state.score, distance: this.state.distance, deadTitle: this.state.deadTitle,
       openGame: this.openGame, closeGame: this.closeGame, restart: this.restart,
       projects: [
-        { title: 'chesscoach', href: '/node/15', year: '2019',
+        { title: 'chesscoach', href: 'https://github.com/tangentstorm/chesscoach', year: '2019',
           blurb: 'A simple chess UI in go, with frontends in direct graphics and JS + websockets.',
-          tags: [T('chess', 18), T('go', 19), T('js', 20)],
+          tags: [T('chess'), T('go'), T('js')],
           repo: 'https://github.com/tangentstorm/chesscoach', demo: null },
-        { title: 'bex', href: '/node/14', year: '2019',
+        { title: 'bex', href: 'https://github.com/tangentstorm/bex', year: '2019',
           blurb: 'A rust crate for working with large boolean expressions as ASTs, binary decision diagrams, or algebraic normal form.',
-          tags: [T('bdd', 17), T('data structure', 16), T('rust', 15)],
+          tags: [T('bdd'), T('data structure'), T('rust')],
           repo: 'https://github.com/tangentstorm/bex', demo: null },
-        { title: 'Tentraminos', href: '/node/12', year: '2013',
+        { title: 'Tentraminos', href: 'https://github.com/tangentstorm/tentraminos', year: '2013',
           blurb: 'A falling blocks game I made with typescript and d3 for Ludum Dare 27.',
-          tags: [T('d3.js', 12), T('game', 3), T('typescript', 11)],
-          repo: 'https://github.com/tangentstorm/tentraminos', demo: 'http://games.tangentcode.com/tentraminos/' },
-        { title: 'Tetraminex', href: '/node/9', year: '2011',
+          tags: [T('d3.js'), T('game'), T('typescript')],
+          repo: 'https://github.com/tangentstorm/tentraminos', demo: 'https://tangentstorm.github.io/arcade/tentraminos/' },
+        { title: 'Tetraminex', href: 'https://github.com/tangentstorm/tetraminex', year: '2011',
           blurb: 'A puzzle game that combines sokoban with the push-pull mechanic from arimaa.',
-          tags: [T('as3', 6), T('flash', 2), T('game', 3)],
-          repo: 'https://github.com/sabren/tetraminex', demo: 'http://tetraminex.com/episode/00/' },
-        { title: 'Spiders v Aliens', href: '/node/7', year: '2011',
+          tags: [T('as3'), T('flash'), T('game')],
+          repo: 'https://github.com/tangentstorm/tetraminex', demo: 'http://tetraminex.com/episode/00/' },
+        { title: 'Spiders v Aliens', href: 'https://github.com/sabren/spiders-v-aliens', year: '2011',
           blurb: 'A short action/adventure game I made for Ludum Dare.',
-          tags: [T('as3', 6), T('flash', 2), T('flixel', 5), T('game', 3)],
-          repo: 'https://github.com/sabren/spiders-v-aliens', demo: 'http://www.kongregate.com/games/tangentstorm/spiders-v-aliens' }
+          tags: [T('as3'), T('flash'), T('flixel'), T('game')],
+          repo: 'https://github.com/sabren/spiders-v-aliens', demo: 'https://tangentstorm.github.io/arcade/spiders_v_aliens/' }
       ]
     };
   }
